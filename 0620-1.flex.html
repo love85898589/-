@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ch7. Flex</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/myall.css" />
+    <style>
+      .box {
+        height: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="display-2">1. flex-row (水平-可加上斷點)</div>
+      <div class="row d-flex flex-row">
+        <div class="col-md-3">
+          <div class="box bg-primary">
+            <div class="display-2">01</div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="box bg-primary">
+            <div class="display-2">02</div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="box bg-primary">
+            <div class="display-2">03</div>
+          </div>
+        </div>
+        <div class="display-2">2. flex-row-reverse(水平反轉-可加上斷點)</div>
+        <div class="row d-flex-column"></div>
+        <div class="col-md-3">
+          <div class="box bg-primary">
+            <div class="display-2">01</div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="box bg-primary">
+            <div class="display-2">01</div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="box bg-primary">
+            <div class="display-2">01</div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="box bg-primary">
+            <div class="display-2">01</div>
+          </div>
+        </div>
+        <div class="display-5">9. justify-content-around</div>
+        <div class="row justify-content-around">
+          <div class="col-md-3">
+            <div class="box bg-primary">
+              <div class="display-2">01</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="box bg-success">
+              <div class="display-2">01</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="box bg-warning">
+              <div class="display-2">01</div>
+            </div>
+          </div>
+        </div>
+        <div class="display-5">11. aligb-items-center</div>
+        <div class="row d-flex flex-column align-items-center">
+          <div class="col-md-3">
+            <div class="box bg-primary">
+              <div class="display-2">01</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="box bg-success">
+              <div class="display-2">01</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="box bg-warning">
+              <div class="display-2">01</div>
+            </div>
+          </div>
+        </div>
+        <div class="display-5">13. aligb-items-center(align-self-lg-*, start,center, end)</div>
+        <div class="row d-flex flex-column align-items-center">
+          <div class="col-md-3 align-self-lg-start">
+            <div class="box bg-primary">
+              <div class="display-2">01</div>
+            </div>
+          </div>
+          <div class="col-md-3 align-self-lg">
+            <div class="box bg-01">
+              <div class="display-2">02</div>
+            </div>
+          </div>
+          <div class="col-md-3 align-self-end">
+            <div class="box bg-success">
+              <div class="display-2">03</div>
+            </div>
+          </div>
+          <div class="col-md-3 align-self-end">
+            <div class="box bg-02">
+              <div class="display-2">04</div>
+            </div>
+          </div>
+          <div class="col-md-3 align-self-end">
+            <div class="box bg-success">
+              <div class="display-2">05</div>
+            </div>
+          </div>
+        </div>
+        <div class="display-5">14. order</div>
+        <div class="row d-flex flex-row">
+            <div class="col-md-2 order-sm-1 order-md-5 order-lg-4">
+                <div class="box bg-primary">
+                    <div class="display-2">01</div>
+                </div>
+            </div>
+            <div class="col-md-2 order-sm-1 order-md-5 order-lg-5">
+                <div class="box bg-primary">
+                    <div class="display-2">02</div>
+                </div>
+            </div>
+            <div class="col-md-2 order-sm-1 order-md-5 order-lg-1">
+                <div class="box bg-primary">
+                    <div class="display-2">03</div>
+                </div>
+            </div>
+            <div class="col-md-2 order-sm-1 order-md-5 order-lg-2">
+                <div class="box bg-primary">
+                    <div class="display-2">04</div>
+                </div>
+            </div>
+            <div class="col-md-2 order-sm-1 order-md-5 order-lg-3">
+                <div class="box bg-primary">
+                    <div class="display-2">05</div>
+                </div>
+            </div>
+        </div>
+        <div class="display-5">15. 推格子(me-auto, ms-auto)</div>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="box bg-primary">
+                    <div class="display-2">01</div>
+                </div>
+            </div>
+      </div>
+      <div class="col-md-2">
+        <div class="box bg-primary">
+            <div class="display-2">01</div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="box bg-primary">
+            <div class="display-2">02</div>
+        </div>
+    </div>
+    <div class="col-md-2 ms-auto">
+        <div class="box bg-primary">
+            <div class="display-2">03</div>
+        </div>
+    </div>
+    <div class="display-5">16. 垂直推格子(mt-auto, mb-auto)</div>
+    <div class="row d-flex flex-column bg-secondary" style="height:800px">
+        <div class="col-md-3 md-auto">
+            <div class="box bg-primary">
+                <div class="display-2">01</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="box bg-success">
+                <div class="display-2">01</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="box bg-primary">
+                <div class="display-2">01</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="box bg-warning">
+                <div class="display-2">01</div>
+            </div>
+        </div>
+    </div>
+        <div class="container bg-04" style="height: 100xb;">
+        <div class="display-5">17. spacing(間隔)</div>
+        <div class="row">
+            <div class="col-5 me-5 mt-5">描述陽明山浪費桃園不足差距簡體大聲手上親自我和，各個財政策劃世界上聯繫電話，您的評論連載會計選項，簡直南方賺錢論文電池，考慮否則資產找到認為探索嚴格好評從事生成把握直接，事項改變格式那種最重要不太傳來代理天天今天運動忍不住，集團容易更新時間很好參與所有人。</div>
+            <div class="col-5 mx-3">描述陽明山浪費桃園不足差距簡體大聲手上親自我和，各個財政策劃世界上聯繫電話，您的評論連載會計選項，簡直南方賺錢論文電池，考慮否則資產找到認為探索嚴格好評從事生成把握直接，事項改變格式那種最重要不太傳來代理天天今天運動忍不住，集團容易更新時間很好參與所有人。</div>
+            <div class="col-6 mt-3 p-3">描述陽明山浪費桃園不足差距簡體大聲手上親自我和，各個財政策劃世界上聯繫電話，您的評論連載會計選項，簡直南方賺錢論文電池，考慮否則資產找到認為探索嚴格好評從事生成把握直接，事項改變格式那種最重要不太傳來代理天天今天運動忍不住，集團容易更新時間很好參與所有人。</div>
+        </div>
+    </div>
+    </div>
+  </body>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</html>

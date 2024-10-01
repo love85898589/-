@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>甜食.SweetCake - 關於我們</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+
+    <style>
+        .timeline-section{
+            position: relative;
+        }
+        .timeline-section::before{
+            position: absolute;
+            content: "";
+            top: 10px;
+            bottom: 10px;
+            width: 4px;
+            background-color: var(--mycolor01);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .timeline-section-pointer{
+            position: relative;
+        }
+        .timeline-section-pointer::before{
+            position: absolute;
+            content: "";
+            width: 24px;
+            height: 24px;
+            background-color: var(--mycolor10);
+            border-radius: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 7px solid var(--mycolor03);
+            top: 10px;
+        }
+        .timeline-section-pointer:hover::before{
+            width: 36px;
+            height: 36px;
+            border: 10px solid var(--mycolor06);
+        }
+
+        @media screen and (max-width: 768px){
+            .timeline-section::before{
+                left: -10px;
+            }
+            .timeline-section-pointer::before{
+                left: 3px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1. 以時間軸排版除了關於我們, 店家資訊以,自行規劃兩個關於店家介紹的內容 -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid ">
+            <a class="navbar-brand" href="#">
+                <i class="fa-solid fa-utensils text-danger fs-1"></i>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="0701-steak-index.html"><i
+                                class="fa-solid fa-house text-success me-1"></i>首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="0701.cake.about.html"><i class="fa-solid fa-circle-info text-primary me-1"></i>關於我們</a>
+                    </li>
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle" href="0701-steak-product_1.html" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-bag-shopping text-warning me-1"></i>產品介紹
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="0701-steak-product.html">牛排套餐</a></li>
+                            <li><a class="dropdown-item" href="0701-steak-product_1.html">精緻蛋糕</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> -->
+            </div>
+        </div>
+    </nav>
+    <div class="banner bg-info bg-cover d-none d-md-block" style="height: 260px; background-image: linear-gradient(180deg, rgba(224, 7, 130, 0.1),rgba(149, 12, 240, 0.3)), url(image/0701-8.jpg);"></div>
+    <div class="container">
+        <div class="timeline-section">
+        <div class="row align-items-center timeline-section-pointer ">
+            <div class="col-md-6 mt-3 text-center">
+                <div class="h3 text-danger fw-900">關於我們<small class="text-muted">About Us</small></div>
+                <p class="fw-700">吃一口讓你宛如置身巴黎街頭, 超好吃!</p>
+                <ul class="list-unstyled fw-700">
+                    <li>手工精緻烘焙。</li>
+                    <li>甜點溫暖心靈。</li>
+                    <li>香氣滿屋飄揚。</li>
+                    <li>甜蜜生活首選。</li>
+                </ul>
+            </div>
+            <div class="col-md-6 bg-cover mt-3" style="background-image: url(image/0701-5.jpg); height: 260px;"></div>
+        </div>
+        <div class="row align-items-center flex-row-reverse timeline-section-pointer">
+            <div class="col-md-6 mt-3 text-center">
+                <div class="h3 text-success fw-900">店家資訊<small class="text-muted">Store Info.</small></div>
+                <p class="fw-700">吃一口讓你宛如置身巴黎街頭, 超好吃!</p>
+                <ul class="list-unstyled fw-700">
+                    <li>地址: xxxxxxxxx</li>
+                    <li>電話: xxxxxxxxx</li>
+                    <li>營業時段: xxxxxxxxxxxxxx</li>
+                </ul>
+            </div>
+            <div class="col-md-6 bg-cover mt-3" style="background-image: url(image/0701-2.jpg); height: 260px;"></div>
+        </div>
+        <div class="row align-items-center timeline-section-pointer">
+            <div class="col-md-6 mt-3 text-center">
+                <div class="h3 text-danger fw-900">關於我們<small class="text-muted">About Us</small></div>
+                <p class="fw-700">吃一口讓你宛如置身巴黎街頭, 超好吃!</p>
+                <ul class="list-unstyled fw-700">
+                    <li>手工精緻烘焙。</li>
+                    <li>甜點溫暖心靈。</li>
+                    <li>香氣滿屋飄揚。</li>
+                    <li>甜蜜生活首選。</li>
+                </ul>
+            </div>
+            <div class="col-md-6 bg-cover mt-3" style="background-image: url(image/0701-3.jpg); height: 260px;"></div>
+        </div>
+        <div class="row align-items-center flex-row-reverse timeline-section-pointer">
+            <div class="col-md-6 mt-3 text-center">
+                <div class="h3 text-success fw-900">店家資訊<small class="text-muted">Store Info.</small></div>
+                <p class="fw-700">吃一口讓你宛如置身巴黎街頭, 超好吃!</p>
+                <ul class="list-unstyled fw-700">
+                    <li>地址: xxxxxxxxx</li>
+                    <li>電話: xxxxxxxxx</li>
+                    <li>營業時段: xxxxxxxxxxxxxx</li>
+                </ul>
+            </div>
+            <div class="col-md-6 bg-cover mt-3" style="background-image: url(image/0701-1.jpg); height: 260px;"></div>
+        </div>
+        </div>
+    </div>
+    <div class="footer text-bg-dark h4 text-center py-2 fixed-bottom">
+        雲端技術班製作 2024.07
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

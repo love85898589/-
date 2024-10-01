@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>甜食.SweetCake - 產品介紹</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <i class="fa-solid fa-utensils text-danger fs-1"></i>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="0701-steak-index.html"><i class="fa-solid fa-house text-success me-1"></i>首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="0701.cake.about.html"><i class="fa-solid fa-circle-info text-primary me-1"></i>關於我們</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-bag-shopping text-warning me-1"></i>產品介紹
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="0701-steak-product.html">牛排套餐</a></li>
+                            <li><a class="dropdown-item" href="0701-steak-product_1.html">精緻蛋糕</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> -->
+            </div>
+        </div>
+    </nav>
+    <div class="banner bg-info bg-cover d-none d-md-block" style="height: 260px; background-image: linear-gradient(180deg, rgba(224, 7, 130, 0.1),rgba(149, 12, 240, 0.3)), url(image/0701-1.jpg);"></div>
+    <div class="container">
+        <h2 class="text-warning fw-900 my-3">|產品介紹<small class="text-muted">Product</small></h2>
+        <div class="row gy-3" id="mydata" >
+            <div class="col-lg-4">
+                <div class="card">
+                    <img src="image/0701-11.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <div class="card-text h3 fw-900 text-primary">牛排套餐</div>
+                        <div class="card-text h4 fw-900">價格: 199/套</div>
+                        <div class="card-text"><span class="h4 fw-900">原料:</span> 
+                            <span class="text-bg-success badge fw-500">牛排</span>
+                            <span class="text-bg-info badge fw-500">黑胡椒</span>
+                            <span class="text-bg-danger badge fw-500">蛋</span>
+                        </div>
+                        <div class="card-text h5 fw-900 mt-2">簡介: <span class="fw-400">春天公司記憶，上網不住一對信號多次他們無比身後，證實明顯可。</span></div>
+                        <a href="http://127.0.0.1:5500/0701.cake.details.html" target="_blank" class="btn btn-warning w-100 my-3">加入購物</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer text-bg-dark h4 text-center py-2 mt-3">
+        雲端技術班製作 2024.07
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        var bakeryData;
+        $(function(){
+        $.ajax({
+          type: "GET",
+          url: "js/bakery_products_zh.json",
+          dataType: "json",
+          success: showdata,
+          error: function(){
+            console.log("error - js/bakery_products_zh.json");
+          }
+        });
+      });
+      function showdata(data){
+        console.log(data);
+        $("#mydata").empty();
+        bakeryData = data;
+        bakeryIng = data.Ingredients;
+        bakeryData.forEach(function(item){
+
+          // console.log(Math.ceil(Math.random()*5));
+          // var mran = Math.ceil(Math.random()*5);
+
+          // var Ing = '';
+          // for(var i = 0; i < item.Ingredients.length; i++){
+          //   if(i % 2 == 0){
+          //     Ing += '<span class="text-bg-warning badge fw-500">' + item.Ingredients[i] + '</span>';
+          //   }else{
+          //     Ing += '<span class="text-bg-danger badge fw-500">' + item.Ingredients[i] + '</span>';
+          //   }
+          // }
+          var Ing = '';
+          for(var i = 0; i < item.Ingredients.length; i++){
+            switch(Math.ceil(Math.random()*5)){
+            case 1:Ing += '<span class="text-bg-warning badge fw-500">' + item.Ingredients[i] + '</span>';
+            break;
+            case 2:Ing += '<span class="text-bg-danger badge fw-500">' + item.Ingredients[i] + '</span>';
+            break;
+            case 3:Ing += '<span class="text-bg-info badge fw-500">' + item.Ingredients[i] + '</span>';
+            break;
+            case 4:Ing += '<span class="text-bg-success badge fw-500">' + item.Ingredients[i] + '</span>';
+            break;
+            case 5:Ing += '<span class="text-bg-primary badge fw-500">' + item.Ingredients[i] + '</span>';
+            break;
+          }
+          }
+
+        //   if(item.ImagePath != ''){
+        //     switch(Math.ceil(Math.random()*5)){
+        //     case 1:item.ImagePath = 'images/dessert001.jpg';
+        //     break;
+        //     case 2:item.ImagePath = 'images/dessert002.jpg';
+        //     break;
+        //     case 3:item.ImagePath = 'images/dessert003.jpg';
+        //     break;
+        //     case 4:item.ImagePath = 'images/dessert004.jpg';
+        //     break;
+        //     case 5:item.ImagePath = 'images/dessert005.jpg';
+        //     break;
+        //   }
+        //     // item.ImagePath = 'images/dessert001.jpg'
+        //   }
+
+          var strHTML = '<div class="col-lg-4"><div class="card h-100"><img src="' + item.ImagePath + '" class="card-img-top" alt=""><div class="card-body d-flex flex-column"><div class="card-text h3 fw-900 text-primary">' + item.ProductName + '</div><div class="card-text h4 fw-900">價格: ' + item.Price + '</div><div class="card-text"><span class="h4 fw-900">原料:</span>' + Ing + '</div><div class="card-text h5 fw-900 mt-2">簡介: <span class="fw-400">' + item.Description + '</span></div> <a href="0701-steak-product_1.html" target="_blank" class="btn btn-warning w-100 my-3">加入購物</a>';
+          
+          $("#mydata").append(strHTML);
+          
+        });
+      }
+    </script>
+</body>
+
+</html>

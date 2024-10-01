@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ch5 table</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/myall.css" />
+    <style>
+      @media screen and (max-width: 992px) {
+        .table-rwd thead {
+          display: none;
+        }
+        .table-rwd tbody tr {
+          display: block;
+          border: 5px solid var(--mycolor09);
+          margin-top: 15px;
+        }
+        .table-rwd tbody tr td {
+          display: block;
+          overflow: hidden;
+        }
+        .table-rwd tbody tr td::before {
+          content: attr(data-th) " : ";
+          color: blueviolet;
+          /*font-size: 20px;*/
+          font-weight: bolder;
+          display: block;
+          float: left;
+          width: 30%;
+          text-align: right;
+          padding-right: 1em;
+        }
+        .table-rwd tbody tr td span.table-col {
+          display: block;
+          float: left;
+          width: calc(100% - 6em);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <table class="table table-rwd">
+        <thead class="table-dark">
+          <tr>
+            <th width="5%">商品編號</th>
+            <th width="5%">商品名稱</th>
+            <th width="20%">商品圖片</th>
+            <th width="5%">商品價格</th>
+            <th width="5%">商品數量</th>
+            <th width="60%">商品備註</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td dath-th="商品編號"><span class="table-col">001</span></td>
+            <td dath-th="商品名稱"><span class="table-col">餐點控肉輕食</span></td>
+            <td dath-th="商品圖片">
+              <span class="table-col"
+                ><img src="image/0611-1.jpeg" width="300px" alt=""
+              /></span>
+            </td>
+            <td dath-th="商品價格"><span class="table-col">99元</span></td>
+            <td dath-th="商品數量"><span class="table-col">10個</span></td>
+            <td dath-th="商品備註">
+              <span class="table-col"
+                >這裡告訴我訊息原因經歷凱文進去萬華我想，五金巨大不想指數想到奇蹟構成，女朋友女朋友處理我國美麗，只能說到沒想到尋求或是首先，用來生意添加說話原理理想條例新臺幣觀看記錄，觀點任何平時深刻各種說出交友他們的力道就能幾乎無線起點，儘量為何給你價值能不能緊急作家。
+              </span>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td dath-th="商品編號"><span class="table-col">002</span></td>
+            <td dath-th="商品名稱"><span class="table-col">餐點蝦捲</span></td>
+            <td dath-th="商品圖片">
+              <span class="table-col"
+                ><img src="image/0611-2.jpeg" width="300px" alt=""
+              /></span>
+            </td>
+            <td dath-th="商品價格"><span class="table-col">99元</span></td>
+            <td dath-th="商品數量"><span class="table-col">10個</span></td>
+            <td dath-th="商品備註">
+              <span class="table-col"
+                >這裡告訴我訊息原因經歷凱文進去萬華我想，五金巨大不想指數想到奇蹟構成，女朋友女朋友處理我國美麗，只能說到沒想到尋求或是首先，用來生意添加說話原理理想條例新臺幣觀看記錄，觀點任何平時深刻各種說出交友他們的力道就能幾乎無線起點，儘量為何給你價值能不能緊急作家。
+              </span>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+            <tr>
+              <td dath-th="商品編號"><span class="table-col">003</span></td>
+              <td dath-th="商品名稱"><span class="table-col">餐點豬排飯</span></td>
+              <td dath-th="商品圖片">
+                <span class="table-col"
+                  ><img src="image/0611-3.jpeg" width="300px" alt=""
+                /></span>
+              </td>
+              <td dath-th="商品價格"><span class="table-col">99元</span></td>
+              <td dath-th="商品數量"><span class="table-col">10個</span></td>
+              <td dath-th="商品備註">
+                <span class="table-col"
+                  >這裡告訴我訊息原因經歷凱文進去萬華我想，五金巨大不想指數想到奇蹟構成，女朋友女朋友處理我國美麗，只能說到沒想到尋求或是首先，用來生意添加說話原理理想條例新臺幣觀看記錄，觀點任何平時深刻各種說出交友他們的力道就能幾乎無線起點，儘量為何給你價值能不能緊急作家。
+                </span>
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td dath-th="商品編號"><span class="table-col">004</span></td>
+              <td dath-th="商品名稱"><span class="table-col">餐點排骨飯</span></td>
+              <td dath-th="商品圖片">
+                <span class="table-col"
+                  ><img src="image/0611-4.jpeg" width="300px" alt=""
+                /></span>
+              </td>
+              <td dath-th="商品價格"><span class="table-col">99元</span></td>
+              <td dath-th="商品數量"><span class="table-col">10個</span></td>
+              <td dath-th="商品備註">
+                <span class="table-col"
+                  >這裡告訴我訊息原因經歷凱文進去萬華我想，五金巨大不想指數想到奇蹟構成，女朋友女朋友處理我國美麗，只能說到沒想到尋求或是首先，用來生意添加說話原理理想條例新臺幣觀看記錄，觀點任何平時深刻各種說出交友他們的力道就能幾乎無線起點，儘量為何給你價值能不能緊急作家。
+                </span>
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td dath-th="商品編號"><span class="table-col">005</span></td>
+              <td dath-th="商品名稱"><span class="table-col">餐點生魚片</span></td>
+              <td dath-th="商品圖片">
+                <span class="table-col"
+                  ><img src="image/0611-5.jpeg" width="300px" alt=""
+                /></span>
+              </td>
+              <td dath-th="商品價格"><span class="table-col">99元</span></td>
+              <td dath-th="商品數量"><span class="table-col">10個</span></td>
+              <td dath-th="商品備註">
+                <span class="table-col"
+                  >這裡告訴我訊息原因經歷凱文進去萬華我想，五金巨大不想指數想到奇蹟構成，女朋友女朋友處理我國美麗，只能說到沒想到尋求或是首先，用來生意添加說話原理理想條例新臺幣觀看記錄，觀點任何平時深刻各種說出交友他們的力道就能幾乎無線起點，儘量為何給你價值能不能緊急作家。
+                </span>
+              </td>
+            </tr>
+          </tbody>
+      </table>
+    </div>
+  </body>
+</html>

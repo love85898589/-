@@ -1,0 +1,135 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch.8 練習03</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        .timeline-section{
+            position: relative;
+        }
+        .timeline-section::before{
+            position: absolute;
+            content: "";
+            top: 10px;
+            bottom: 10px;
+            width: 3px;
+            background-color: var(--mycolor01);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .timeline-section-pointer{
+            position: relative;
+        }
+        .timeline-section-pointer::before{
+            position: absolute;
+            content: "";
+            width: 24px;
+            height: 24px;
+            background-color: var(--mycolor03);
+            border-radius: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid var(--mycolor04);
+            top: 15%;
+        }
+        .timeline-section-pointer:hover::before{
+            width: 24px;
+            height: 24px;
+            border: 4px solid var(--mycolor05);
+        }
+        .box_roller{
+            position: relative;
+        }
+        @media screen and (max-width: 768px){
+            .timeline-section::before{
+               left: -5px;
+               transform: translateX(50%);
+            }
+            .timeline-section-pointer::before{
+                left: -5%;
+                transform: translateX(15%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="timeline-section">
+        <div class="row align-items-center timeline-section-pointer">
+            <div class="col-md-6 mt-3">
+                <div class="box_text">
+                    <div class="h3 text-center">暑假專案兩天一夜01</div>
+                    <div class="h4">價格: <s>4999 </s>
+                    <span class="text-danger">3999 元</span>
+                    </div>
+                    <div class="h5">簡介:決策就有程式平衡意味着留言板目錄天空傷心病人石油總數唱片，輸出研發門派交流如此需求成了光臨金融以前作品最重要鈴聲，鄉民們一段編號學院後果加油都不原文條件差距歡迎您固定，總體股票試試手上紅色開發驅動互相少年老人內存別人，有機會強大，不要一臉讓他，各位旁邊自。</div>
+                </div>
+            </div>
+            <div class="col-md-6 mt-3">
+                <div class="boc_img bg-cover box_roller" style="background-image: url(image/0611-1.jpeg); height: 400px;">
+                    <div class="roller">
+                        <button class="bth bth-warning">查看更多</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center flex-row-reverse timeline-section-pointer">
+            <div class="col-md-6 mt-3">
+                <div class="box_text">
+                    <div class="h3 text-center text-success fw-900">暑假專案兩天一夜02</div>
+                    <div class="h4">價格: <s>4999</s> 元
+                    <span class="text-danger">3999 元</span>
+                    </div>
+                    <div class="h5">簡介:決策就有程式平衡意味着留言板目錄天空傷心病人石油總數唱片，輸出研發門派交流如此需求成了光臨金融以前作品最重要鈴聲，鄉民們一段編號學院後果加油都不原文條件差距歡迎您固定，總體股票試試手上紅色開發驅動互相少年老人內存別人，有機會強大，不要一臉讓他，各位旁邊自。</div>
+                </div>
+            </div>
+            <div class="col-md-6 mt-3">
+                <div class="boc_img bg-cover" style="background-image: url(image/0611-2.jpeg); height: 400px;">
+                    <div class="roller">
+                        <button class="bth bth-warning">查看更多</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center timeline-section-pointer">
+                <div class="col-md-6 mt-3">
+                    <div class="box_text">
+                        <div class="h3 text-center text-success fw-900">暑假專案兩天一夜03</div>
+                        <div class="h4">價格: <s>4999</s> 元
+                        <span class="text-danger">3999 元</span>
+                    </div>
+                        <div class="h5">簡介:決策就有程式平衡意味着留言板目錄天空傷心病人石油總數唱片，輸出研發門派交流如此需求成了光臨金融以前作品最重要鈴聲，鄉民們一段編號學院後果加油都不原文條件差距歡迎您固定，總體股票試試手上紅色開發驅動互相少年老人內存別人，有機會強大，不要一臉讓他，各位旁邊自。</div>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <div class="boc_img bg-cover" style="background-image: url(image/0611-3.jpeg); height: 400px;">
+                        ]<div class="roller">
+                            <button class="bth bth-warning">查看更多</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center flex-row-reverse timeline-section-pointer">
+                    <div class="col-md-6">
+                        <div class="box_text">
+                            <div class="h3 text-center text-success fw-900">暑假專案兩天一夜04</div>
+                            <div class="h4">價格: <s>4999</s> 元
+                            <span class="text-danger">3999 元</span>
+                            </div>
+                            <div class="h5">簡介:決策就有程式平衡意味着留言板目錄天空傷心病人石油總數唱片，輸出研發門派交流如此需求成了光臨金融以前作品最重要鈴聲，鄉民們一段編號學院後果加油都不原文條件差距歡迎您固定，總體股票試試手上紅色開發驅動互相少年老人內存別人，有機會強大，不要一臉讓他，各位旁邊自。</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <div class="boc_img bg-cover" style="background-image: url(image/0611-4.jpeg); height: 400px;"><div class="roller">
+                            <button class="bth bth-warning">查看更多</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>切版網頁做串接練習</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        .box01{
+            height: 220px;
+            background-image: url(image/a001.jpeg);
+        }
+        .box02{
+            height: 140px;
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--mycolor01);
+        }
+        .box03{
+            height:auto;
+            border: 2px solid var(--mycolor02);
+            background-color: var(--mycolor06);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px 5px var(--mycolor08) ;
+        }
+        .box03 .h4{
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        @media screen and (min-width: 992px){
+            .box02{
+                width: 220px;
+                height: 220px;
+                border-radius: 110px;
+                background-color: var(--mycolor02);
+            }
+            .box02:hover{
+                background-color: var(--mycolor05);
+                color: var(--mytextcolor02);
+            }
+        }
+        @media screen and (min-width: 1200px){
+            .box02{
+                width: 260px;
+                height: 260px;
+                border-radius: 130px;
+                background-color: var(--mycolor02);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-lg">
+        <!-- 01 -->
+        <div class="row">
+            <div class="col-12 d-none d-sm-block">
+                <div class="box01 bg-cover"></div>
+            </div>
+        </div>
+        <!-- 02 -->
+         <div class="row">
+            <div class="col-sm-6 col-md-3">
+                <div class="box02 h1">選單01</div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="box02 h1">選單02</div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="box02 h1">選單03</div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="box02 h1">選單04</div>
+            </div>
+         </div>
+        <!-- 03 -->
+         <div class="row g-3" id="mydata">
+            <div class="col-md-6 col-lg-4">
+                <div class="box03 text-center">
+                    <div class="bg-cover" style="background-image: url(images/10.jpg); height: 220px;"></div>
+                    <div class="h4">列表物理現代化相關內容風情，品質購買尚未宜蘭冠軍一家居住進來文化模式另外破壞，普遍期限研究，積分食。</div>
+                </div>
+            </div>
+         </div>
+        <!-- 04 -->
+        <div class="row">
+            <div class="col-12 mt-3 d-none d-md-block">
+                <img src="https://fakeimg.pl/1400x150/200" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $.ajax({
+                type: "GET",
+                url: "https://data.moa.gov.tw/Service/OpenData/ODwsv/ODwsvTravelFood.aspx?IsTransData=1&UnitId=193",
+                dataType: "json",
+                success: showdata,
+                error: function(){
+                    console.log("連結錯誤!-https://data.moa.gov.tw/Service/OpenData/ODwsv/ODwsvTravelFood.aspx?IsTransData=1&UnitId=193");
+                }
+            });
+        });
+
+        function showdata(data){
+            console.log(data);
+            $("#mydata").empty();
+            for(var i = 0; i < 15; i++){
+                var Hword = data[i].HostWords.substring(0,30);
+                var strHTML = '<div class="col-md-6 col-lg-4 mt-3"><div class="box03 h-100 text-center"><div class="bg-cover" style="background-image: url(' + data[i].PicURL + '); height: 220px;"></div><div class="h4">' + data[i].Name + '</div><div class="h4">電話: ' + data[i].Tel + ' </div><div class="h4">地址: ' + data[i].Address + '</div><div class="h4">簡介:' + Hword + '</div></div></div>';
+
+                $("#mydata").append(strHTML)
+            }
+        }
+     </script>
+</body>
+</html>
